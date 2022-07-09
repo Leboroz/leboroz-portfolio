@@ -4,16 +4,14 @@
   background-color: $gray-100;
   color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem $section-padding;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  padding: 1rem;
+  border-radius: calc(2rem + 10px);
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
 
   .nav-links {
-    display: flex;
-    gap: 2rem;
+    transform: translateX(5px);
   }
 }

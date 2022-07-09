@@ -12,7 +12,7 @@
 
 .btn {
   &-contact {
-    background-color: $gray-500;
+    background-color: $red;
     color: #fff;
     position: fixed;
     bottom: 1rem;
@@ -26,10 +26,11 @@
     border-radius: 4rem;
     width: 4rem;
     transition: 350ms ease;
-    border-color: $gray-500;
+    border-color: $red;
+    z-index: 1000;
 
     &:hover {
-      width: 162px;
+      width: 225px;
       span {
         display: block;
       }
@@ -44,7 +45,11 @@
       position: absolute;
       right: 1rem;
       opacity: 0;
+      font-weight: 700;
+      transform: translateY(2px);
       animation: show 150ms ease 350ms forwards;
+      letter-spacing: $letter-space;
+      text-transform: uppercase;
     }
   }
 }

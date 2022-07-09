@@ -1,3 +1,11 @@
+@use '../mixins/breakpoints' as *;
 .intro-section {
+  padding-top: calc(4rem + 16px);
   
+  &-content {
+    @include mq(lg) {
+      width: 50%;
+      transform: translateX(2rem);
+    }
+  }
 }
