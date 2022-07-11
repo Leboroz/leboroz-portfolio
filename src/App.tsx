@@ -11,16 +11,16 @@ function App() {
     <>
       <Navbar links={
         [
-          [<HiOutlineHome />, '#'],
-          [<HiOutlineBriefcase />, '#'],
-          [<SiAboutdotme />, '#'],
-          [<FaRegEnvelope />, '#'],
+          {comp: <HiOutlineHome />, link: '#'},
+          {comp: <HiOutlineBriefcase />, link: '#'},
+          {comp: <SiAboutdotme />, link: '#'},
+          {comp: <FaRegEnvelope />, link: '#'},
         ]
       }/>
       <Navbar className="socials" links={
         [
-          [<FiGithub />, 'https://github.com/leboroz'],
-          [<FiLinkedin />, 'https://linkedin.com/in/leboroz'],
+          {comp: <FiGithub />, link: 'https://github.com/leboroz'},
+          {comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz'},
         ]
       }><div className="line"></div></Navbar>
       <ContactMeButton />
