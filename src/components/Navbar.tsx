@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-type link = ReactNode | string;
+type link = {comp: ReactNode, link: string};
 
 type props = {
   className?: string,
@@ -13,10 +13,10 @@ export default function Navbar({className = "navbar", links, children}: props) {
     <header className={`${className}`}>
       <nav>
         <ul className="nav-links">
-          {links.map((link, index: number) => {
+          {links.map(({comp, link}: link, index: number) => {
              return (
               <li key={index} className="nav-link fs-3">
-                <a className="text-primary" href={link[1]}>{link[0]}</a>
+                <a className="text-primary" href={link}>{comp}</a>
               </li>
             )
           })}
@@ -26,7 +26,4 @@ export default function Navbar({className = "navbar", links, children}: props) {
     </header>
   );
 }
-
-
-
 
