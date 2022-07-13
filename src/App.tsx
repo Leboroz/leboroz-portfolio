@@ -1,9 +1,9 @@
 import IntroSection from "./pages/IntroSection";
+import WorkSection from "./pages/WorkSection";
 import Navbar from "./components/Navbar";
 import ContactMeButton from "./components/ContactMeButton";
 import { HiOutlineHome, HiOutlineBriefcase } from 'react-icons/hi'
 import { SiAboutdotme } from 'react-icons/si';
-import { FaRegEnvelope } from 'react-icons/fa';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
           {comp: <HiOutlineHome />, link: '#'},
           {comp: <HiOutlineBriefcase />, link: '#'},
           {comp: <SiAboutdotme />, link: '#'},
-          {comp: <FaRegEnvelope />, link: '#'},
         ]
       }/>
       <Navbar className="socials" links={
@@ -25,6 +24,7 @@ function App() {
       }><div className="line"></div></Navbar>
       <ContactMeButton />
       <IntroSection />
+      <WorkSection />
     </>
   );
 }
