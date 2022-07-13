@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+.socials {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .line {
+    height: 3rem;
+    width: 2px;
+    background-color: $red;
+  }
+}

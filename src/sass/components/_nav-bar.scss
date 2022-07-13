@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+.navbar {
+  background-color: $gray-100;
+  color: #fff;
+  display: flex;
+  position: fixed;
+  padding: 1rem;
+  border-radius: calc(2rem + 10px);
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+
+  .nav-links {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,63 @@
+@use './variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+//default
+
+body {
+  margin: 0 auto;
+  font-size: 9px;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gap {
+ @for $i from 1 to 7 {
+    &-#{$i} {
+      gap: #{$i}rem;
+    }
+  } 
+}
+
+.section {
+  height: 100vh;
+  padding-inline: $section-padding;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.letter-gap {
+  letter-spacing: $letter-space;
+}
+
