@@ -1,4 +1,5 @@
 import IntroSection from "./pages/IntroSection";
+import AboutSection from "./pages/AboutSection";
 import WorkSection from "./pages/WorkSection";
 import Navbar from "./components/Navbar";
 import ContactMeButton from "./components/ContactMeButton";
@@ -25,6 +26,7 @@ function App() {
       <ContactMeButton />
       <IntroSection />
       <WorkSection />
+      <AboutSection />
     </>
   );
 }

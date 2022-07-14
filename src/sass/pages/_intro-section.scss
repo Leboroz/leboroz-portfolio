@@ -1,6 +1,12 @@
 @use '../mixins/breakpoints' as *;
 .intro-section {
   padding-top: calc(4rem + 16px);
+
+  article {
+    h3 {
+      font-family: "Space Mono";
+    }
+  }
   
   &-content {
     @include mq(sm) {
