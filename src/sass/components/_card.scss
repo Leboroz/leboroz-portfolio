@@ -1,0 +1,139 @@
+@use '../variables' as *;
+
+.card {
+  width: 47%;
+  height: 48.5%;
+  position: relative;
+  margin-right: 3%;
+  margin-bottom: 1.5%;
+  transition: transform 350ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.07);
+    box-shadow: 10px 5px 20px rgba($black, 0.3);
+
+    .gray-screen {
+      opacity: 0.4;
+    }
+
+    .card-body {
+      h2 {
+        opacity: 1;
+      }
+    }
+  }
+
+  #close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    opacity: 0;
+    border: 0;
+    background-color: transparent;
+
+    svg {
+      font-size: 2rem;
+      color: $red;
+      transition: 350ms ease;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gray-screen {
+    width: 100%;
+    height: 100%;
+    background-color: $red;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: 350ms ease;
+  }
+
+  .card-body {
+    padding: 15px;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    h2 {
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 15px;
+      transition: 350ms ease;
+    }
+
+    p {
+      display: none;
+    }
+
+    div {
+      display: none;
+      height: fit-content;
+    }
+  }
+
+  &.modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    background-color: #fff;
+    cursor: default;
+
+    &:hover {
+      transform: none;
+
+      .gray-screen {
+        opacity: 0;
+      }
+    }
+
+    .card-body {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      height: 100%;
+
+      h2 {
+        position: static;
+        color: #000;
+        opacity: 1;
+      }
+      
+      p {
+        display: block;
+      }
+      
+      div {
+        display: flex;
+      }
+    }
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    .gray-screen {
+      display: none;
+    }
+
+    #close {
+      opacity: 1;
+    }
+  }
+}

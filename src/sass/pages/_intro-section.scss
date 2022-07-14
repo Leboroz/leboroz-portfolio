@@ -3,7 +3,7 @@
   padding-top: calc(4rem + 16px);
   
   &-content {
-    @include mq(lg) {
+    @include mq(sm) {
       width: 50%;
       transform: translateX(2rem);
     }
