@@ -1,17 +1,32 @@
 @use '../variables' as *;
+@use '../mixins/breakpoints' as *;
 
 .navbar {
   background-color: $gray-100;
   color: #fff;
-  display: flex;
   position: fixed;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: calc(2rem + 10px);
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
+  box-shadow: 5px 2px 10px rgba($black, 0.2);
+  top: 75vh;
+  right: 50vw;
+  transform: translateX(50%);
+
+  @include mq(md) {
+    top: 50vh;
+    right: 1rem;
+    transform: translateY(-50%);
+  };
 
   .nav-links {
-    transform: translateX(5px);
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    transform: translateY(7.5px);
+
+    @include mq(md) {
+      flex-direction: column;
+      transform: translateX(7.5px);
+    };
   }
 }

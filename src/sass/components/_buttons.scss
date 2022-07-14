@@ -1,4 +1,5 @@
 @use '../variables' as *;
+@use '../mixins/breakpoints' as *;
 
 @keyframes show {
   from {
@@ -11,28 +12,36 @@
 }
 
 .btn {
-  &-contact {
+  border-radius: 4rem;
+  padding: 1rem;
+  border: 0;
+  display: inline-flex;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 900;
+  align-items: center;
+
+  &-primary {
     background-color: $red;
     color: #fff;
+  }
+
+  &-contact {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
     overflow: hidden;
-    padding: 1rem;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 4rem;
     width: 4rem;
     transition: 350ms ease;
-    border-color: $red;
     z-index: 1000;
 
-    &:hover {
-      width: 225px;
-      span {
-        display: block;
+
+    @include mq(lg) {
+      &:hover {
+        width: 225px;
+        span {
+          display: block;
+        }
       }
     }
 

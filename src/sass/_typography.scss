@@ -26,7 +26,12 @@
 }
 
 .display-1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
+
+  @include mq(md) {
+    font-size: 2rem;
+  }
+
   @include mq(lg) {
     font-size: 3rem;
   }
