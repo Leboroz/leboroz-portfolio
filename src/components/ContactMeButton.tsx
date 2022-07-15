@@ -1,5 +1,15 @@
-import { FaRegEnvelope } from 'react-icons/fa';
+import { ReactNode } from "react";
+import { MouseEventHandler } from 'react';
 
-export default function ContactMeButton() {
-  return <button className="btn btn-primary btn-contact"><FaRegEnvelope /><span> Contact me</span></button>
+type ContactMeButtonType = {
+  onClick?: MouseEventHandler,
+  children?: ReactNode[] | reactNode,
+}
+
+export default function ContactMeButton({onClick, children}: ContactMeButtonType) {
+  return (
+    <button onClick={onClick} className="btn btn-primary btn-contact">
+      {children}
+    </button>
+  );
 }
