@@ -1,0 +1,21 @@
+@use '../variables' as *;
+
+.about-section {
+  &-content {
+    div {
+      ul {
+        padding-left: 40px;
+        font-family: "Space Mono";
+
+        li::before {
+          content: "\2023";
+          color: $red;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+}

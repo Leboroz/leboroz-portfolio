@@ -7,8 +7,8 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
 //default
@@ -26,6 +26,10 @@ body {
   @include mq(lg) {
     font-size: 16px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -87,7 +91,7 @@ ul {
 
 .section {
   height: 100vh;
-  padding: $section-padding;
+  padding: 4vh $section-padding;
 }
 
 .flex {
