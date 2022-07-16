@@ -1,6 +1,25 @@
+import { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+
 export default function AboutSection() {
+  const aboutSection = useRef<any>();
+  let tl = useRef<any>();
+
+  useEffect(() => {
+    const section = gsap.utils.selector(aboutSection);
+    gsap
+      .to(section('article'), {
+        'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        transform: 'translateY(-20%)',
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: '#about'
+        }
+      });
+  }, [])
+
   return (
-    <section id="about" className="about-section section flex a-center">
+    <section ref={aboutSection} id="about" className="about-section section flex a-center">
       <article className="about-section-content text-white flex column gap-1">
         <h2 className="letter-gap weight-300 fs-3">About</h2>
         <p className="fs-2">

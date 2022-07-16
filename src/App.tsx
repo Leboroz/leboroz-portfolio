@@ -11,6 +11,9 @@ import { FaRegEnvelope } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [ showPopUp, setShowPopUp ] = useState<boolean>(false);
@@ -22,6 +25,11 @@ export default function App() {
   let selector = gsap.utils.selector(myForm);
 
   useEffect(() => {
+    const section = gsap.utils.selector(app);
+    gsap
+      .timeline({ defaults: { duration: 2 }})
+      .to(section('.navbar, .socials'), {delay: 1, duration: 1, transform: 'translateY(-50%) scale(1)' });
+
     tl.current = gsap.timeline({ paused: true, defaults: {duration: 0.35}}) 
       .to(myForm.current!, {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
       .to(selector('.contact-me-form'), {opacity: 1})

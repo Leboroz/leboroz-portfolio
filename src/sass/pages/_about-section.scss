@@ -7,7 +7,13 @@
     justify-content: center;
   }
   &-content {
-    width: 50%;
+    transform: translateY(20%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+    @include mq(lg) {
+      width: 50%;
+    }
+
     div {
       ul {
         padding-left: 40px;
