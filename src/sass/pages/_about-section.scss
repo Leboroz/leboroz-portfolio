@@ -1,7 +1,13 @@
 @use '../variables' as *;
+@use '../mixins/breakpoints' as *;
 
 .about-section {
+  @include mq(lg) {
+    display: flex;
+    justify-content: center;
+  }
   &-content {
+    width: 50%;
     div {
       ul {
         padding-left: 40px;

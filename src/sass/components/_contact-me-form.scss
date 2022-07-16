@@ -1,14 +1,20 @@
 @use '../variables' as *;
+@use '../mixins/breakpoints' as *;
 
 .contact-me-form {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  gap: 0.5rem;
+  gap: 2rem;
+
+  @include mq(sm, max) {
+    width: 70vw;
+  }
 
   textarea {
     padding: 0.75rem;
   }
+
   .form-element {
     display: flex;
     align-items: center;
@@ -16,7 +22,7 @@
     gap: 0.75rem;
     border: 1px solid rgba(#fff, 0.4);
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1rem;
     background-color: $black;
     outline-color: $red;
     padding-left: 0.75rem;

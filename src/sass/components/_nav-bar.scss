@@ -2,18 +2,21 @@
 @use '../mixins/breakpoints' as *;
 
 .navbar {
-  background-color: $gray-100;
+  background-color: $black-600;
   color: #fff;
   position: fixed;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
+  border: 1px solid $gray-600;
   border-radius: calc(2rem + 10px);
   box-shadow: 5px 2px 10px rgba($black, 0.2);
-  top: 75vh;
+  bottom: 9vh;
   right: 50vw;
   transform: translateX(50%);
+  z-index: 8000;
 
   @include mq(md) {
     top: 50vh;
+    bottom: unset;
     right: 1rem;
     transform: translateY(-50%);
   };
@@ -21,12 +24,14 @@
   .nav-links {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
-    transform: translateY(7.5px);
+    gap: 1rem;
 
     @include mq(md) {
       flex-direction: column;
-      transform: translateX(7.5px);
     };
+
+    .active {
+      color: $gray;
+    }
   }
 }

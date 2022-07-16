@@ -1,7 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { FiExternalLink } from 'react-icons/fi'; 
 
-export default function ContactForm({ref}: any) {
+export default function ContactForm({ onClick, ref }: any) {
   const [state, handleSubmit] = useForm("mpzbggnr");
   
   const handleFormSubmit = (e: any) => {
@@ -9,7 +9,7 @@ export default function ContactForm({ref}: any) {
   }
 
   if (state.succeeded) {
-    return  <p>load</p>
+    onClick();
   }
 
   return (
@@ -45,7 +45,7 @@ export default function ContactForm({ref}: any) {
           name="message"
           style={{height: 200}}
           className="form-element"
-          placeHolder="Write your message..."
+          placeholder="Write your message..."
         />
         <ValidationError 
           prefix="Message" 

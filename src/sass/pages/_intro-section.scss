@@ -1,10 +1,27 @@
 @use '../mixins/breakpoints' as *;
+@use '../variables' as *;
 .intro-section {
   padding-top: calc(4rem + 16px);
 
   article {
     h3 {
       font-family: "Space Mono";
+    }
+  }
+
+  .bg-text {
+    display: none;
+    color: $black;
+    text-shadow: 0 0 40px #fff;
+    width: 100vw;
+    font-size: 15vw; 
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    opacity: 0.1;
+    @include mq(sm) {
+      display: block;
     }
   }
   
