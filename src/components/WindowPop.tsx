@@ -1,4 +1,4 @@
-import { ReactNode, RefObject } from 'react';
+import { ReactNode } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
 type WindowPopType = {
