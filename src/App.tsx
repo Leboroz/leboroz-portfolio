@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect, MouseEvent } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import IntroSection from "./pages/IntroSection";
 import AboutSection from "./pages/AboutSection";
 import WorkSection from "./pages/WorkSection";
@@ -33,7 +33,7 @@ export default function App() {
     tl.current = gsap.timeline({ paused: true, defaults: {duration: 0.35}}) 
       .to(myForm.current!, {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
       .to(selector('.contact-me-form'), {opacity: 1})
-  }, []);
+  }, [selector]);
 
   useEffect(() => {
     const sections: NodeListOf<HTMLElement> = app.current.querySelectorAll('.section');

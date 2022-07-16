@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 
 export default function IntroSection() {
   const introSection = useRef<any>();
-  let tl = useRef<any>();
 
   useEffect(() => {
     const section = gsap.utils.selector(introSection);

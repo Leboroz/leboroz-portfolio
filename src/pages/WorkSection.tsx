@@ -5,7 +5,6 @@ import arrOfProjects from '../utils/projects';
 
 export default function WorkSection() {
   const workSection = useRef<any>();
-  let tl = useRef<any>();
 
   useEffect(() => {
     const section = gsap.utils.selector(workSection);
