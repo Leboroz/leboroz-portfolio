@@ -29,11 +29,11 @@
   font-size: 1.75rem;
 
   @include mq(md) {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   @include mq(lg) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
