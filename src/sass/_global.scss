@@ -1,0 +1,129 @@
+@use './variables' as *;
+@use './mixins/breakpoints' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//default
+
+body {
+  margin: 0 auto;
+  font-size: 10px;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $black;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gap {
+ @for $i from 1 to 7 {
+    &-#{$i} {
+      gap: #{$i}rem;
+    }
+  } 
+}
+
+.m {
+ @for $i from 1 to 7 {
+    &-#{$i} {
+      margin: #{$i}rem;
+    }
+  } 
+
+  &t {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        margin-top: #{$i}rem;
+      }
+    } 
+  }
+
+  &b {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        margin-bottom: #{$i}rem;
+      }
+    } 
+  }
+
+  &l {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        margin-left: #{$i}rem;
+      }
+    } 
+  }
+
+  &r {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        margin-right: #{$i}rem;
+      }
+    } 
+  }
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.section {
+  height: 100vh;
+  padding: 4vh $section-padding;
+  scroll-snap-align: start;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.letter-gap {
+  letter-spacing: $letter-space;
+}
+

@@ -1,0 +1,39 @@
+@use './_variables.scss' as *;
+@use './mixins/breakpoints' as *;
+
+.text-white {
+  color: #fff;
+}
+
+.text-primary {
+  color: $red;
+}
+
+.weight {
+ @for $i from 1 to 10 {
+    &-#{$i}00 {
+      font-weight: #{$i}00;
+    }
+  } 
+}
+
+.fs {
+ @for $i from 1 to 6 {
+    &-#{$i} {
+      font-size: calc(0.5 * #{$i}rem);
+    }
+  } 
+}
+
+.display-1 {
+  font-size: 1.75rem;
+
+  @include mq(md) {
+    font-size: 2.25rem;
+  }
+
+  @include mq(lg) {
+    font-size: 3rem;
+  }
+}
+

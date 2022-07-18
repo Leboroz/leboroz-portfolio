@@ -1,0 +1,41 @@
+@use '../mixins/breakpoints' as *;
+@use '../variables' as *;
+.intro-section {
+  padding-top: calc(4rem + 16px);
+
+  article {
+    transform: translateY(20%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    h3 {
+      font-family: "Space Mono";
+    }
+  }
+
+  .bg-text {
+    display: none;
+    color: $black;
+    text-shadow: 0 0 40px #fff;
+    font-size: 10vw; 
+    pointer-events: none;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    opacity: 0;
+
+    @include mq(sm) {
+      display: block;
+    }
+
+    @include mq(sm) {
+      font-size: 15vw; 
+    }
+  }
+  
+  &-content {
+    @include mq(sm) {
+      width: 50%;
+      transform: translateX(2rem);
+    }
+  }
+}

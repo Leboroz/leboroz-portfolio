@@ -1,0 +1,85 @@
+@use '../variables' as *;
+@use '../mixins/breakpoints' as *;
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.btn {
+  border-radius: 4rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 0.70rem;
+  font-size: 0.6rem;
+  font-weight: 900;
+  align-items: center;
+  letter-spacing: $letter-space;
+  width: fit-content;
+
+  @include mq(lg) {
+    gap: 0.75rem;
+    font-size: 1rem;
+  }
+
+  svg {
+    font-size: 1.24rem;
+  }
+
+  &-primary {
+    background-color: $red;
+    color: #fff;
+    border-color: $red;
+    transition: 350ms ease;
+
+    &:hover {
+      background-color: $black;
+      color: $red;
+    }
+
+    &-outline {
+      color: $red;
+      background-color: $black;
+      border-color: $red;
+      transition: 350ms ease;
+
+      &:hover {
+        background-color: $red;
+        color: #fff;
+      }
+    }
+  }
+
+  &-contact {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    overflow: hidden;
+    width: 4rem;
+    transition: 350ms ease;
+    z-index: 1000;
+
+    svg {
+      font-size: 2rem;
+    }
+
+    span {
+      display: none;
+      position: absolute;
+      right: 1rem;
+      opacity: 0;
+      font-weight: 700;
+      transform: translateY(2px);
+      animation: show 150ms ease 350ms forwards;
+      letter-spacing: $letter-space;
+      text-transform: uppercase;
+    }
+  }
+}

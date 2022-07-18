@@ -1,0 +1,23 @@
+@use '../variables' as *;
+@use '../mixins/breakpoints' as *;
+
+.socials {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%) scale(0);
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(md) {
+    display: flex;
+  }
+
+
+  .line {
+    height: 3rem;
+    width: 2px;
+    background-color: $red;
+  }
+}

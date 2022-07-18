@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixins/breakpoints' as *;
+
+.navbar {
+  background-color: $black-600;
+  color: #fff;
+  position: fixed;
+  padding: 1rem;
+  border: 1px solid $gray-600;
+  border-radius: calc(2rem + 10px);
+  box-shadow: 5px 2px 10px rgba($black, 0.2);
+  bottom: 9vh;
+  right: 28vw;
+  transform: translateX(50%) scale(0);
+  z-index: 8000;
+
+  @include mq(sm) {
+    top: 50vh;
+    bottom: unset;
+    right: 1rem;
+    transform: translate(-50%) scale(0);
+  };
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    @include mq(sm) {
+      flex-direction: column;
+    };
+
+    .active {
+      color: $gray;
+    }
+  }
+}
