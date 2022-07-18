@@ -28,7 +28,7 @@ export default function App() {
     const section = gsap.utils.selector(app);
     gsap
       .timeline({ defaults: { duration: 2 }})
-      .to(section('.navbar, .socials'), {delay: 1, duration: 1, transform: 'translateY(-50%) scale(1)' });
+      .to(section('.navbar, .socials'), {delay: 3, duration: 1, transform: 'translateY(-50%) scale(1)' });
 
     tl.current = gsap.timeline({ paused: true, defaults: {duration: 0.35}}) 
       .to(myForm.current!, {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})

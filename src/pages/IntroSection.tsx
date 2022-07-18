@@ -9,7 +9,8 @@ export default function IntroSection() {
     gsap.timeline({defaults: {duration: 2}}).to(section('.intro-section-content'),
       {
         'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-        transform: 'translateY(-20%)'
+        delay: 2,
+        transform: 'translateY(-20%)',
       })
     .to(section('.bg-text'), { opacity: 0.1 });
   }, [])
