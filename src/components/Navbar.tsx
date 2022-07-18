@@ -6,9 +6,10 @@ type props = {
   className?: string,
   links: link[],
   children?: ReactNode[] | ReactNode,
+  active?: string,
 };
 
-export default function Navbar({className = "navbar", links, children}: props) {
+export default function Navbar({className = "navbar", active, links, children}: props) {
   return (
     <header className={`${className}`}>
       <nav>
@@ -16,7 +17,7 @@ export default function Navbar({className = "navbar", links, children}: props) {
           {links.map(({comp, link}: link, index: number) => {
              return (
               <li key={index} className="nav-link fs-3">
-                <a className="text-primary" href={link}>{comp}</a>
+                <a className={`text-primary ${active === link ? 'active' : '' }`} href={'#' + link}>{comp}</a>
               </li>
             )
           })}

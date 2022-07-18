@@ -1,7 +1,19 @@
 @use '../variables' as *;
+@use '../mixins/breakpoints' as *;
 
 .about-section {
+  @include mq(lg) {
+    display: flex;
+    justify-content: center;
+  }
   &-content {
+    transform: translateY(20%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+    @include mq(lg) {
+      width: 50%;
+    }
+
     div {
       ul {
         padding-left: 40px;

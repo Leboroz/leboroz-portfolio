@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, MouseEvent } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import IntroSection from "./pages/IntroSection";
 import AboutSection from "./pages/AboutSection";
 import WorkSection from "./pages/WorkSection";
@@ -11,40 +11,53 @@ import { FaRegEnvelope } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-function App() {
-  const [ showPopUp, setShowPopUp ] = useState(false);
-  const myForm = useRef<HTMLDivElement>();
-  let tl = useRef();
-  let selector = gsap.utils.selector(myForm);
+gsap.registerPlugin(ScrollTrigger);
 
-  const showPopUpHandler = (event: MouseEvent<HTMLButtonElement>) => {
-    if(!tl.current.isActive())
-      tl.current.resume();
-    setShowPopUp(!showPopUp);
-  }
+export default function App() {
+  const [ showPopUp, setShowPopUp ] = useState<boolean>(false);
+  const [ currentPage, setCurrentPage ] = useState<string>('intro');
+  const myForm = useRef<HTMLDivElement | undefined>();
+  const app = useRef<any>();
+  const tl = useRef<any>();
+
 
   useEffect(() => {
-    tl.current && tl.current.progress(0).kill();
-    tl.current = gsap
-      .timeline({ defaults: {duration: 0.35}})
-      .to(myForm.current, {'clip-path': 'polygon(0% 0%, 7% 0%, 7% 100%, 0% 100%)'})
-      .to(myForm.current, {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
+    let selector = gsap.utils.selector(myForm);
+    const section = gsap.utils.selector(app);
+    gsap
+      .timeline({ defaults: { duration: 2 }})
+      .to(section('.navbar, .socials'), {delay: 3, duration: 1, transform: 'translateY(-50%) scale(1)' });
+
+    tl.current = gsap.timeline({ paused: true, defaults: {duration: 0.35}}) 
+      .to(myForm.current!, {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
       .to(selector('.contact-me-form'), {opacity: 1})
-      .pause();
   }, []);
 
   useEffect(() => {
-    tl.current.reversed(!showPopUp);    
-  }, [showPopUp]);
+    const sections: NodeListOf<HTMLElement> = app.current.querySelectorAll('.section');
+
+    window.addEventListener('scroll', () => {
+      let listSize: number = sections.length;
+      while(--listSize && window.scrollY + 90 < sections[listSize].offsetTop){}
+      setCurrentPage(sections[listSize].id);
+    });
+  }, []);
+
+  const animate = useCallback(() => {
+    showPopUp ? tl.current!.reverse() : tl.current!.play();
+    setShowPopUp(!showPopUp);
+  }, [showPopUp, tl]);
+
 
   return (
-    <>
-      <Navbar links={
+    <div ref={app}>
+      <Navbar active={currentPage} links={
         [
-          {comp: <HiOutlineHome />, link: '#intro'},
-          {comp: <HiOutlineBriefcase />, link: '#work'},
-          {comp: <SiAboutdotme />, link: '#about'},
+          {comp: <HiOutlineHome />, link: 'intro'},
+          {comp: <HiOutlineBriefcase />, link: 'work'},
+          {comp: <SiAboutdotme />, link: 'about'},
         ]
       }/>
       <Navbar className="socials" links={
@@ -55,17 +68,15 @@ function App() {
       }>
         <div className="line"></div>
       </Navbar>
-      <WindowPopUp pos={{bottom: '4rem', left: '2rem'}} refWin={myForm}>
-        <ContactForm />
+      <WindowPopUp onClick={animate} pos={{bottom: '4rem', left: '2rem'}} refWin={myForm}>
+        <ContactForm onClick={animate} />
       </WindowPopUp>
-      <ContactMeButton onClick={showPopUpHandler}>
+      <ContactMeButton onClick={animate}>
         <FaRegEnvelope />
       </ContactMeButton>
       <IntroSection />
       <WorkSection />
       <AboutSection />
-    </>
+    </div>
   );
 }
-
-export default App;

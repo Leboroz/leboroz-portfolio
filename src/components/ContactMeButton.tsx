@@ -3,7 +3,7 @@ import { MouseEventHandler } from 'react';
 
 type ContactMeButtonType = {
   onClick?: MouseEventHandler,
-  children?: ReactNode[] | reactNode,
+  children?: ReactNode[] | ReactNode,
 }
 
 export default function ContactMeButton({onClick, children}: ContactMeButtonType) {
