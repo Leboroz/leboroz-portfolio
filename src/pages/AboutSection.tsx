@@ -43,7 +43,7 @@ export default function AboutSection() {
           </ul>
         </div>
       </article>
-      <div></div>
+      <div className="bg-image"></div>
     </section>
   );
 }
