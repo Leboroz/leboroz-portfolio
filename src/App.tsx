@@ -57,9 +57,9 @@ export default function App() {
       <LoadingScreen />
       <Navbar active={currentPage} links={
         [
-          {comp: <HiOutlineHome />, link: 'intro'},
-          {comp: <HiOutlineBriefcase />, link: 'work'},
-          {comp: <SiAboutdotme />, link: 'about'},
+          {comp: <HiOutlineHome />, link: '#intro'},
+          {comp: <HiOutlineBriefcase />, link: '#work'},
+          {comp: <SiAboutdotme />, link: '#about'},
         ]
       }/>
       <Navbar className="socials" links={
