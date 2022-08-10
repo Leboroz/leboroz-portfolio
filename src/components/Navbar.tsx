@@ -17,7 +17,7 @@ export default function Navbar({className = "navbar", active, links, children}: 
           {links.map(({comp, link}: link, index: number) => {
              return (
               <li key={index} className="nav-link fs-3">
-                <a className={`text-primary ${active === link ? 'active' : '' }`} href={'#' + link}>{comp}</a>
+                <a className={`text-primary ${active === link ? 'active' : '' }`} href={link}>{comp}</a>
               </li>
             )
           })}
