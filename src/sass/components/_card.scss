@@ -126,6 +126,7 @@
       width: 75%;
       height: auto;
       @include mq(lg) {
+        width: 50%;
         height: 100%;
       }
     }
