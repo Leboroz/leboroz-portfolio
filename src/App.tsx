@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [ showPopUp, setShowPopUp ] = useState<boolean>(false);
-  const [ currentPage, setCurrentPage ] = useState<string>('intro');
+  const [ currentPage, setCurrentPage ] = useState<string>('#intro');
   const myForm = useRef<HTMLDivElement | undefined>();
   const app = useRef<any>();
   const tl = useRef<any>();
@@ -42,7 +42,7 @@ export default function App() {
     window.addEventListener('scroll', () => {
       let listSize: number = sections.length;
       while(--listSize && window.scrollY + 90 < sections[listSize].offsetTop){}
-      setCurrentPage(sections[listSize].id);
+      setCurrentPage("#" + sections[listSize].id);
     });
   }, []);
 
