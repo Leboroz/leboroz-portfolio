@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import IntroSection from "./pages/IntroSection";
 import AboutSection from "./pages/AboutSection";
 import WorkSection from "./pages/WorkSection";
+import TestimonialsSection from "./pages/TestimonialsSection";
 import Navbar from "./components/Navbar";
 import LoadingScreen from "./components/LoadingScreen";
 import ContactMeButton from "./components/ContactMeButton";
@@ -79,6 +80,7 @@ export default function App() {
       <IntroSection />
       <WorkSection />
       <AboutSection />
+      <TestimonialsSection />
     </div>
   );
 }

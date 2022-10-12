@@ -24,7 +24,7 @@ const arrOfProjects = [
   },
   {
     image: project3,
-    title: 'Ballhead',
+    title: 'Pollution App',
     languages: ['React-Redux', 'SASS', '+1'],
     description:
       'This is a design for a mobile app that fetches from an pollution API and displays the data. Built with React-Redux and SASS.',
