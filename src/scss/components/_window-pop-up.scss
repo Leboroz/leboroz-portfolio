@@ -3,7 +3,7 @@
 .window-pop-up {
   position: fixed;
   color: #fff;
-  border: 1px solid rgba($red, 0.4);
+  border: 1px solid rgba($primary, 0.4);
   border-radius: 5px;
   z-index: 9999;
   clip-path: polygon(0 100%, 7% 100%, 7% 100%, 0 100%);
@@ -15,7 +15,7 @@
   .close-button {
     background-color: transparent;
     border: 0;
-    color: $red;
+    color: $primary;
     font-size: 2rem;
     position: absolute;
     top: 1.5rem;

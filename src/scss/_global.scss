@@ -9,12 +9,14 @@
 
 html {
   scroll-behavior: smooth;
+}
 
-  @include mq(lg) {
-    scroll-snap-type: y mandatory;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+::-webkit-scrollbar {
+  width: 0.5rem;
+
+  &-thumb {
+    background-color: $primary;
+    border-radius: 15px;
   }
 }
 
@@ -99,7 +101,6 @@ ul {
 .section {
   height: 100vh;
   padding: 4vh $section-padding;
-  scroll-snap-align: start;
 }
 
 .flex {

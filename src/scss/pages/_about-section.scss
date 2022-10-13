@@ -1,0 +1,35 @@
+@use '../variables' as *;
+@use '../mixins/breakpoints' as *;
+
+.about-section {
+  @include mq(lg) {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  &-content {
+    transform: translateY(20%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+    @include mq(lg) {
+      width: 50%;
+    }
+
+    div {
+      flex: 1;
+      ul {
+        padding-left: 40px;
+        font-family: "Space Mono";
+
+        li::before {
+          content: "\2023";
+          color: $primary;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+}
