@@ -13,7 +13,7 @@ export default function Testimonial({ name, testimonial, link, image, header }: 
   return (
     <article className="testimonial">
       <figure className='testimonial-image-wrapper'>
-        <img src={image} alt="image" />
+        <img src={image} alt="user" />
       </figure>
       <div className="testimonial-body">
         <h2 className="text-primary">{name}</h2>
