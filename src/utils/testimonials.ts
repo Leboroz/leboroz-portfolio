@@ -1,4 +1,4 @@
-export default {
+const testimonials = {
   testimonials: [
     {
       image: "https://media-exp1.licdn.com/dms/image/C4E03AQF_Z3i7RLSL_g/profile-displayphoto-shrink_100_100/0/1651958324219?e=1666224000&v=beta&t=h8E3wr4UdcPqh_GbWTc2Ey3LIj8aEpuWAwMyPQ3MaYs",
@@ -22,3 +22,5 @@ export default {
     }
   ]
 }
+
+export default testimonials;
