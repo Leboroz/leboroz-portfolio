@@ -1,6 +1,11 @@
 @use './global';
 @use './typography';
 
+@use './pages/intro-section';
+@use './pages/work-section';
+@use './pages/about-section';
+@use './pages/testimonials-section';
+
 @use './components/nav-bar';
 @use './components/buttons';
 @use './components/socials';
@@ -8,7 +13,5 @@
 @use './components/card';
 @use './components/window-pop-up';
 @use './components/contact-me-form';
+@use './components/testimonial';
 
-@use './pages/intro-section';
-@use './pages/work-section';
-@use './pages/about-section';

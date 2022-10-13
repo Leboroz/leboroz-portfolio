@@ -39,7 +39,7 @@
 
     svg {
       font-size: 2rem;
-      color: $red;
+      color: $primary;
       transition: 350ms ease;
     }
   }
@@ -59,7 +59,7 @@
     transition: 350ms ease;
 
     @include mq(lg) {
-      background-color: rgba($red, 0.4);
+      background-color: rgba($primary, 0.4);
       opacity: 0;
     }
   }
@@ -80,7 +80,7 @@
     h2 {
       width: 100%;
       transition: 350ms ease;
-      color: $red;
+      color: $primary;
 
       @include mq(lg) {
         position: absolute;
@@ -123,9 +123,10 @@
     
     img {
       align-self: center;
-      width: 50%;
+      width: 75%;
       height: auto;
       @include mq(lg) {
+        width: 50%;
         height: 100%;
       }
     }
