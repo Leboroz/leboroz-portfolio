@@ -23,7 +23,7 @@
 
         li::before {
           content: "\2023";
-          color: $red;
+          color: $primary;
           font-weight: bold;
           display: inline-block; 
           width: 1em;
@@ -50,7 +50,7 @@
 
     &:before {
       content: '';
-      background: $red;
+      background: $primary;
       position: absolute;
       opacity: 0.4;
       width: 100%;

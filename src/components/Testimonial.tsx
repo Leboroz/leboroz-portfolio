@@ -1,42 +1,33 @@
-import { useState, MouseEvent } from 'react';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
-import { FiGithub } from 'react-icons/fi';
-import { IoMdClose } from 'react-icons/io';
+import { RiSingleQuotesL, RiSingleQuotesR } from 'react-icons/ri';
 
-type cardProps = {
+export type testimonial = {
+  image: string,
   name: string,
   testimonial: string,
-  button: string[],
-  img: {
-    imgSrc: string,
-    imgDescription: string,
-  },
+  link: string,
+  header: string,
 };
 
-export default function Testimonial({ name, testimonial, img, button }:cardProps) {
-  const [clicked, setClicked] = useState(false); 
-  const [linkToSource, linkLiveVersion] = button;
-
-  const openHandler = (e:MouseEvent<HTMLDivElement>) => {
-    setClicked(true);
-  }
-
-  const closeHandler = () => {
-    setClicked(false);
-  }
-
+export default function Testimonial({ name, testimonial, link, image, header }: testimonial) {
   return (
-    <article className={`card ${clicked ? 'modal' : ''}`}>
-      <button id='close' onClick={closeHandler} type='button'><IoMdClose ></IoMdClose></button>
-      <img src={img.imgSrc} alt={img.imgDescription} />
-      <div onClick={openHandler} className="gray-screen">
-        <div className="card-body">
-          <h2 className="text-white">{name}</h2>
-          <p>{testimonial}</p>
-          <div className="buttons gap-2">
-            <a href={linkLiveVersion} className="btn btn-primary" target="_blank" rel="noreferrer"><BsBoxArrowUpRight /> Live Version</a>
-            <a href={linkToSource} className="btn btn-primary" target="_blank" rel="noreferrer"><FiGithub /> Source Code</a>
-          </div>
+    <article className="testimonial">
+      <figure className='testimonial-image-wrapper'>
+        <img src={image} alt="image" />
+      </figure>
+      <div className="testimonial-body">
+        <h2 className="text-primary">{name}</h2>
+        <h3>
+          {header}</h3>
+        <p>
+          <RiSingleQuotesL />
+          <RiSingleQuotesL />
+          {testimonial}
+          <RiSingleQuotesR />
+          <RiSingleQuotesR />
+        </p>
+        <div className="buttons gap-2">
+          <a href={link} className="btn btn-primary" target="_blank" rel="noreferrer"><BsBoxArrowUpRight />See Linkedin</a>
         </div>
       </div>
     </article>

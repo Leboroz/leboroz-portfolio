@@ -34,24 +34,24 @@
   }
 
   &-primary {
-    background-color: $red;
+    background-color: $primary;
     color: #fff;
-    border-color: $red;
+    border-color: $primary;
     transition: 350ms ease;
 
     &:hover {
       background-color: $black;
-      color: $red;
+      color: $primary;
     }
 
     &-outline {
-      color: $red;
+      color: $primary;
       background-color: $black;
-      border-color: $red;
+      border-color: $primary;
       transition: 350ms ease;
 
       &:hover {
-        background-color: $red;
+        background-color: $primary;
         color: #fff;
       }
     }
