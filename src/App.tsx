@@ -8,7 +8,6 @@ import ContactForm from "./components/ContactForm";
 import { HiOutlineHome, HiOutlineBriefcase } from 'react-icons/hi'
 import { FaRegEnvelope } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
-import { IoPeopleCircleOutline } from 'react-icons/io5';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -57,7 +56,6 @@ export default function App() {
           { comp: <HiOutlineHome />, link: '#intro', name: 'home', tip: 'Introduction' },
           { comp: <HiOutlineBriefcase />, link: '#work', name: 'work', tip: 'Projects' },
           { comp: <SiAboutdotme />, link: '#about', name: 'about', tip: 'About' },
-          { comp: <IoPeopleCircleOutline />, link: '#testimonials', name: 'testimonials', tip: 'Testimonials' },
         ]
       } />
       <Navbar place="left" className="socials" links={
