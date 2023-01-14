@@ -1,8 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import IntroSection from "./pages/IntroSection";
-import AboutSection from "./pages/AboutSection";
-import WorkSection from "./pages/WorkSection";
-import TestimonialsSection from "./pages/TestimonialsSection";
+import { IntroSection, AboutSection, WorkSection, TestimonialsSection } from './pages';
 import Navbar from "./components/Navbar";
 import LoadingScreen from "./components/LoadingScreen";
 import ContactMeButton from "./components/ContactMeButton";
@@ -55,18 +52,18 @@ export default function App() {
   return (
     <div ref={app}>
       <LoadingScreen />
-      <Navbar active={currentPage} links={
+      <Navbar place="right" active={currentPage} links={
         [
-          { comp: <HiOutlineHome />, link: '#intro' },
-          { comp: <HiOutlineBriefcase />, link: '#work' },
-          { comp: <SiAboutdotme />, link: '#about' },
-          { comp: <IoPeopleCircleOutline />, link: '#testimonials' },
+          { comp: <HiOutlineHome />, link: '#intro', name: 'home', tip: 'Introduction' },
+          { comp: <HiOutlineBriefcase />, link: '#work', name: 'work', tip: 'Projects' },
+          { comp: <SiAboutdotme />, link: '#about', name: 'about', tip: 'About' },
+          { comp: <IoPeopleCircleOutline />, link: '#testimonials', name: 'testimonials', tip: 'Testimonials' },
         ]
       } />
-      <Navbar className="socials" links={
+      <Navbar place="left" className="socials" links={
         [
-          { comp: <FiGithub />, link: 'https://github.com/leboroz' },
-          { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz' },
+          { comp: <FiGithub />, link: 'https://github.com/leboroz', name: 'github', tip: 'Github' },
+          { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin' },
         ]
       }>
         <div className="line"></div>
