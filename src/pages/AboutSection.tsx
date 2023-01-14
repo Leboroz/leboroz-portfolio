@@ -20,7 +20,7 @@ export default function AboutSection() {
   }, [])
 
   const downloadHandler = () => {
-    fetch('Leonardo-Albornoz-Front-end.pdf').then(response => {
+    fetch('leonardo-albornoz-resume.pdf').then(response => {
       response.blob().then(blob => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');

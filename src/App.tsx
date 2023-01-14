@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { IntroSection, AboutSection, WorkSection, TestimonialsSection } from './pages';
+import { IntroSection, AboutSection, WorkSection } from './pages';
 import Navbar from "./components/Navbar";
 import LoadingScreen from "./components/LoadingScreen";
 import ContactMeButton from "./components/ContactMeButton";
@@ -77,7 +77,6 @@ export default function App() {
       <IntroSection />
       <WorkSection />
       <AboutSection />
-      <TestimonialsSection />
     </div>
   );
 }
