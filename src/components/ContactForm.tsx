@@ -9,7 +9,7 @@ export default function ContactForm({ onClick, ref }: any) {
   }
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Your message has been delivered, I'll get back to you soon!</p>;
   }
 
   return (

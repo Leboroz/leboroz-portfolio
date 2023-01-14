@@ -1,30 +1,43 @@
 import { ReactNode } from 'react';
+import { Tooltip } from 'react-tooltip';
 
-type link = {comp: ReactNode, link: string};
+type link = { comp: ReactNode, link: string, name: string, tip: string };
 
 type props = {
   className?: string,
   links: link[],
   children?: ReactNode[] | ReactNode,
   active?: string,
+  place: string,
 };
 
-export default function Navbar({className = "navbar", active, links, children}: props) {
+export default function Navbar({ className = "navbar", active, links, children, place }: props) {
   return (
-    <header className={`${className}`}>
-      <nav>
-        <ul className="nav-links">
-          {links.map(({comp, link}: link, index: number) => {
-             return (
-              <li key={index} className="nav-link fs-3">
-                <a className={`text-primary ${active === link ? 'active' : '' }`} href={link}>{comp}</a>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
-      {children}
-    </header>
+    <>
+      <header className={`${className}`}>
+        <nav>
+          <ul className="nav-links">
+            {links.map(({ comp, link, name }: link, index: number) => {
+              return (
+                <li key={index} className="nav-link fs-3">
+                  <a id={name} className={`text-primary ${active === link ? 'active' : ''}`} href={link}>{comp}</a>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+        {children}
+      </header>
+      {links.map(({ name, tip }: link) => (
+        <Tooltip
+          anchorId={name}
+          place={place === 'left' ? 'right' : 'left'}
+          content={tip}
+          className="z-9000"
+          delayShow={500}
+        />
+      ))}
+    </>
   );
 }
 
