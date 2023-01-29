@@ -19,7 +19,7 @@ const arrOfProjects = [
     languages: ['Ruby on rails', 'Bootstrap', '+1'],
     description:
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are logged in the can create groups of transactions and see the total amount. Users can create transactions for one or many groups.',
-    linkLiveVersion: 'https://leboroz-budget-app.herokuapp.com/',
+    linkLiveVersion: 'https://rails-budget-app-fqfy.onrender.com/',
     linkToSource: 'https://github.com/Leboroz/budget-app',
   },
   {
@@ -35,9 +35,9 @@ const arrOfProjects = [
     image: project5,
     title: 'LATAM Annual Conference',
     languages: ['HTML/CSS', 'SASS', 'Javascript'],
-    description: 'This is a website about a conference in Latin America.',
-    linkLiveVersion: 'https://leboroz.github.io/capstone-project-1/',
-    linkToSource: 'https://github.com/Leboroz/capstone-project-1',
+    description: 'This is a mock conference website inspired by a LATAM annual conference using Cindy Shin\'s template.It is built using HTML, CSS, and Javascript.',
+    linkLiveVersion: 'https://leboroz.github.io/latam-annual-conference/',
+    linkToSource: 'https://github.com/Leboroz/latam-annual-conference',
   },
 ];
 

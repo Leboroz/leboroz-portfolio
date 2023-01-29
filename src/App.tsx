@@ -54,8 +54,8 @@ export default function App() {
       <Navbar place="right" active={currentPage} links={
         [
           { comp: <HiOutlineHome />, link: '#intro', name: 'home', tip: 'Introduction' },
-          { comp: <HiOutlineBriefcase />, link: '#work', name: 'work', tip: 'Projects' },
-          { comp: <SiAboutdotme />, link: '#about', name: 'about', tip: 'About' },
+          { comp: <HiOutlineBriefcase />, link: '#project', name: 'work', tip: 'Projects' },
+          { comp: <SiAboutdotme />, link: '#me', name: 'about', tip: 'About' },
         ]
       } />
       <Navbar place="left" className="socials" links={
