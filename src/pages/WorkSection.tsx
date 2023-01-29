@@ -21,26 +21,26 @@ export default function WorkSection() {
   }, [])
 
   return (
-    <section ref={workSection} id="work" className="work-section section bg-white flex column">
+    <section ref={workSection} id="project" className="work-section section bg-white flex column">
       <h1 className="letter-gap weight-300 fs-3 mb-1">Projects</h1>
       <h2 className="weight-900 display-1 mb-1">Open Source</h2>
       <div id="card-container" className="card-container flex wrap">
         {arrOfProjects.map(({
-            title,
-            description,
-            image,
-            linkLiveVersion,
-            linkToSource,
-          }) => {
+          title,
+          description,
+          image,
+          linkLiveVersion,
+          linkToSource,
+        }) => {
           return (
-            <Card 
+            <Card
               key={title}
               title={title}
               description={description}
               button={[linkToSource, linkLiveVersion]}
               img={{
                 imgSrc: image,
-                imgDescription:title,
+                imgDescription: title,
               }}
             />
           );
