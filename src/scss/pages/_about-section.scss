@@ -6,6 +6,14 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
+    article {
+      flex: 1;
+    }
+
+    div {
+      flex: 1;
+    }
   }
   &-content {
     transform: translateY(20%);
@@ -17,19 +25,6 @@
 
     div {
       flex: 1;
-      ul {
-        padding-left: 40px;
-        font-family: "Space Mono";
-
-        li::before {
-          content: "\2023";
-          color: $primary;
-          font-weight: bold;
-          display: inline-block; 
-          width: 1em;
-          margin-left: -1em;
-        }
-      }
     }
   }
 }
