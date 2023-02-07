@@ -54,6 +54,46 @@ ul {
   } 
 }
 
+.p {
+ @for $i from 1 to 7 {
+    &-#{$i} {
+      padding: #{$i}rem;
+    }
+  } 
+
+  &t {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        padding-top: #{$i}rem;
+      }
+    } 
+  }
+
+  &b {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        padding-bottom: #{$i}rem;
+      }
+    } 
+  }
+
+  &l {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        padding-left: #{$i}rem;
+      }
+    } 
+  }
+
+  &r {
+   @for $i from 1 to 7 {
+      &-#{$i} {
+        padding-right: #{$i}rem;
+      }
+    } 
+  }
+}
+
 .m {
  @for $i from 1 to 7 {
     &-#{$i} {
