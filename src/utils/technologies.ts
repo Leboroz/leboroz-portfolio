@@ -74,6 +74,10 @@ const backEnd = [
     img: node,
     label: 'Node',
   },
+  {
+    img: rspec,
+    label: 'Rspec',
+  },
 ];
 
 const tools = [
