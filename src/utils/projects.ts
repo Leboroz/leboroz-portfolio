@@ -1,6 +1,6 @@
 import project1 from '../assets/images/projects/project-1.jpg';
 import project2 from '../assets/images/projects/project-2.jpg';
-import project3 from '../assets/images/projects/project-3.jpg';
+import project7 from '../assets/images/projects/project-7.png';
 import project5 from '../assets/images/projects/project-5.jpg';
 
 const arrOfProjects = [
@@ -23,13 +23,12 @@ const arrOfProjects = [
     linkToSource: 'https://github.com/Leboroz/budget-app',
   },
   {
-    image: project3,
-    title: 'Pollution App',
-    languages: ['React-Redux', 'SASS', '+1'],
-    description:
-      'This is a design for a mobile app that fetches from an pollution API and displays the data. Built with React-Redux and SASS.',
-    linkLiveVersion: 'https://leboroz-ballhead.netlify.com ',
-    linkToSource: 'https://github.com/Leboroz/ballhead-app',
+    image: project7,
+    title: 'Management Dashboard',
+    languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+    description: 'Full-stack appication that allows users to create properties. When users are logged in they get redirected to a dashboard where they can visualize metadata about the properties. Users can sort and filter the properties by price or name.',
+    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
+    linkToSource: 'https://github.com/Leboroz/management-dashboard',
   },
   {
     image: project5,
