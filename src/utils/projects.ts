@@ -1,9 +1,17 @@
 import project1 from '../assets/images/projects/project-1.jpg';
 import project2 from '../assets/images/projects/project-2.jpg';
-import project7 from '../assets/images/projects/project-7.png';
+import project7 from '../assets/images/projects/project-7.jpg';
 import project5 from '../assets/images/projects/project-5.jpg';
 
 const arrOfProjects = [
+  {
+    image: project7,
+    title: 'Management Dashboard',
+    languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+    description: 'Full-stack appication that allows users to create properties. When users are logged in they get redirected to a dashboard where they can visualize metadata about the properties. Users can sort and filter the properties by price or name.',
+    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
+    linkToSource: 'https://github.com/Leboroz/management-dashboard',
+  },
   {
     image: project1,
     title: 'RentUrTech',
@@ -21,14 +29,6 @@ const arrOfProjects = [
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are logged in the can create groups of transactions and see the total amount. Users can create transactions for one or many groups.',
     linkLiveVersion: 'https://rails-budget-app-fqfy.onrender.com/',
     linkToSource: 'https://github.com/Leboroz/budget-app',
-  },
-  {
-    image: project7,
-    title: 'Management Dashboard',
-    languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
-    description: 'Full-stack appication that allows users to create properties. When users are logged in they get redirected to a dashboard where they can visualize metadata about the properties. Users can sort and filter the properties by price or name.',
-    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
-    linkToSource: 'https://github.com/Leboroz/management-dashboard',
   },
   {
     image: project5,
