@@ -14,6 +14,7 @@ export default function ContactForm({ onClick, ref }: any) {
 
   return (
     <form className="contact-me-form" onSubmit={handleFormSubmit}>
+      <h1>Lets connect!</h1>
       <label className="form-element" htmlFor="name">
         Name
         <input

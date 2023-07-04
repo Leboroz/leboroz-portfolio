@@ -138,6 +138,10 @@ ul {
   background-color: #fff;
 }
 
+.bg-primary {
+  background-color: $primary;
+}
+
 .section {
   height: 100vh;
   padding: 4vh $section-padding;

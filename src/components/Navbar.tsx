@@ -9,9 +9,10 @@ type props = {
   children?: ReactNode[] | ReactNode,
   active?: string,
   place: string,
+  blank?: boolean,
 };
 
-export default function Navbar({ className = "navbar", active, links, children, place }: props) {
+export default function Navbar({ className = "navbar", active, links, children, place, blank = false }: props) {
   return (
     <>
       <header className={`${className}`}>
@@ -20,7 +21,7 @@ export default function Navbar({ className = "navbar", active, links, children, 
             {links.map(({ comp, link, name }: link, index: number) => {
               return (
                 <li key={index} className="nav-link fs-3">
-                  <a id={name} className={`text-primary ${active === link ? 'active' : ''}`} href={link}>{comp}</a>
+                  <a id={name} className={`text-primary ${active === link ? 'active' : ''}`} href={link} target={blank ? '_blank' : ''} rel='noreferrer'>{comp}</a>
                 </li>
               )
             })}

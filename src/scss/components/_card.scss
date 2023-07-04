@@ -93,7 +93,7 @@
       display: none;
     }
 
-    div {
+    .buttons {
       display: none;
       height: fit-content;
     }
@@ -125,8 +125,12 @@
       align-self: center;
       width: 75%;
       height: auto;
-      @include mq(lg) {
+
+      @include mq(sm) {
         width: 50%;
+      }
+
+      @include mq(lg) {
         height: 100%;
       }
     }

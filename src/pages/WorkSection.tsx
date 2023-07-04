@@ -31,6 +31,7 @@ export default function WorkSection() {
           image,
           linkLiveVersion,
           linkToSource,
+          languages,
         }) => {
           return (
             <Card
@@ -38,6 +39,7 @@ export default function WorkSection() {
               title={title}
               description={description}
               button={[linkToSource, linkLiveVersion]}
+              technologies={languages}
               img={{
                 imgSrc: image,
                 imgDescription: title,

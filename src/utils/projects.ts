@@ -8,7 +8,7 @@ const arrOfProjects = [
     image: project7,
     title: 'Management Dashboard',
     languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
-    description: 'Full-stack appication that allows users to create properties. When users are logged in they get redirected to a dashboard where they can visualize metadata about the properties. Users can sort and filter the properties by price or name.',
+    description: 'A robust full-stack application that enables users to create and manage property listings. Once logged in, users are directed to a dashboard displaying property metadata. The application allows the sorting and filtering of properties based on price or name for enhanced usability.',
     linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
     linkToSource: 'https://github.com/Leboroz/management-dashboard',
   },
@@ -17,14 +17,14 @@ const arrOfProjects = [
     title: 'RentUrTech',
     languages: ['React-Redux', 'SASS', 'Ruby on Rails'],
     description:
-      'This is a React application part of a full-stack project called "RentUrTech". The main goal of this project is to provide users with an environment to reserve a specific product for a set amount of time. Thus, in this application users can create an account, can log in, and can see all the added equipment or the details of one. They will be required to log in to manage their own reservations. For creating and destroying equipment, the user needs a proper role. Feel free to take this project and modify it for your own business use!',
+      'A scalable e-commerce web application, "RentUrTech", built utilizing React and Ruby on Rails. This application provides a template for businesses to manage and reserve products for customers for specific periods.It enables user account creation, login, and product viewing.An additional administration feature allows business owners to manage their product offerings.',
     linkLiveVersion: 'https://renturtechrender.netlify.app/',
     linkToSource: 'https://github.com/Final-Capstone-Elite-Group/RentUrTechFrontend',
   },
   {
     image: project2,
     title: 'Budget app',
-    languages: ['Ruby on rails', 'Bootstrap', '+1'],
+    languages: ['Ruby on rails', 'Bootstrap'],
     description:
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are logged in the can create groups of transactions and see the total amount. Users can create transactions for one or many groups.',
     linkLiveVersion: 'https://rails-budget-app-fqfy.onrender.com/',
@@ -33,7 +33,7 @@ const arrOfProjects = [
   {
     image: project5,
     title: 'LATAM Annual Conference',
-    languages: ['HTML/CSS', 'SASS', 'Javascript'],
+    languages: ['HTML', 'SASS', 'Javascript'],
     description: 'This is a mock conference website inspired by a LATAM annual conference using Cindy Shin\'s template.It is built using HTML, CSS, and Javascript.',
     linkLiveVersion: 'https://leboroz.github.io/latam-annual-conference/',
     linkToSource: 'https://github.com/Leboroz/latam-annual-conference',

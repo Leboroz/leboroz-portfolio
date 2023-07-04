@@ -34,7 +34,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <section ref={aboutSection} id="me" className="about-section section flex a-center">
+      <section ref={aboutSection} id="me" className="about-section section flex column a-center">
         <article className="about-section-content text-white flex column gap-1">
           <h2 className="letter-gap weight-300 fs-3">About</h2>
           <p className="fs-2">

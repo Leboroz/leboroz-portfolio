@@ -57,13 +57,14 @@ export default function App() {
           { comp: <HiOutlineBriefcase />, link: '#project', name: 'work', tip: 'Projects' },
           { comp: <SiAboutdotme />, link: '#me', name: 'about', tip: 'About' },
         ]
+
       } />
       <Navbar place="left" className="socials" links={
         [
           { comp: <FiGithub />, link: 'https://github.com/leboroz', name: 'github', tip: 'Github' },
           { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin' },
         ]
-      }>
+      } blank>
         <div className="line"></div>
       </Navbar>
       <WindowPopUp onClick={animate} pos={{ bottom: '4rem', left: '2rem' }} refWin={myForm}>

@@ -1,0 +1,19 @@
+@use '../variables' as *;
+@use '../mixins/breakpoints' as *;
+
+.badge {
+  background-color: $primary;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width:150px; /* some width */
+  font-size: 0.5rem;
+
+  @include mq(md){
+    font-size: 0.7rem;
+  }
+}

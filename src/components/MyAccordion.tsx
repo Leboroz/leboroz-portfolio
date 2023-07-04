@@ -9,18 +9,16 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import { Tooltip } from 'react-tooltip';
 import { backEnd, frontEnd, tools } from '../utils/technologies';
 import TechTag from '../components/TechTag';
+import { v4 } from 'uuid';
 
-type propsType = {
-
-};
-
-export const MyAccordion = (props: propsType) => {
+export const MyAccordion = () => {
+  const id = 'first';
   return (
     <>
-      <Accordion>
-        <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>
+      <Accordion preExpanded={[id]}>
+        <AccordionItem uuid={id} >
+          <AccordionItemHeading >
+            <AccordionItemButton className='accordion__button bg-primary'>
               Front-End
             </AccordionItemButton>
           </AccordionItemHeading>

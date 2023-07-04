@@ -2,6 +2,7 @@ import { useState, MouseEvent } from 'react';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import { IoMdClose } from 'react-icons/io';
+import { Badge } from './Badge';
 
 type cardProps = {
   title: string,
@@ -11,13 +12,14 @@ type cardProps = {
     imgSrc: string,
     imgDescription: string,
   },
+  technologies: string[],
 };
 
-export default function Card({ title, description, img, button }:cardProps) {
-  const [clicked, setClicked] = useState(false); 
+export default function Card({ title, description, img, button, technologies }: cardProps) {
+  const [clicked, setClicked] = useState(false);
   const [linkToSource, linkLiveVersion] = button;
 
-  const openHandler = (e:MouseEvent<HTMLDivElement>) => {
+  const openHandler = (e: MouseEvent<HTMLDivElement>) => {
     setClicked(true);
   }
 
@@ -32,6 +34,7 @@ export default function Card({ title, description, img, button }:cardProps) {
       <div onClick={openHandler} className="gray-screen">
         <div className="card-body">
           <h2 className="text-white">{title}</h2>
+          <div className='technologies flex gap-1'>{technologies.map((technology: string) => <Badge text={technology} />)}</div>
           <p>{description}</p>
           <div className="buttons gap-2">
             <a href={linkLiveVersion} className="btn btn-primary" target="_blank" rel="noreferrer"><BsBoxArrowUpRight /> Live Version</a>
