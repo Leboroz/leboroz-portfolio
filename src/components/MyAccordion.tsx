@@ -22,7 +22,7 @@ export const MyAccordion = () => {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <div className='flex wrap p-2'>
+            <div className='flex wrap p-2 between'>
               {frontEnd.map(tech => (<TechTag img={tech.img} label={tech.label} />))}
             </div>
           </AccordionItemPanel>
@@ -34,7 +34,7 @@ export const MyAccordion = () => {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <div className='flex wrap p-2'>
+            <div className='flex wrap p-2 between'>
               {backEnd.map(tech => (<TechTag img={tech.img} label={tech.label} />))}
             </div>
           </AccordionItemPanel>
@@ -46,7 +46,7 @@ export const MyAccordion = () => {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <div className='flex wrap p-2'>
+            <div className='flex wrap p-2 between'>
               {tools.map(tech => (<TechTag img={tech.img} label={tech.label} />))}
             </div>
           </AccordionItemPanel>
