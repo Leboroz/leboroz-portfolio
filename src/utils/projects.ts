@@ -5,14 +5,6 @@ import project5 from '../assets/images/projects/project-5.jpg';
 
 const arrOfProjects = [
   {
-    image: project7,
-    title: 'Management Dashboard',
-    languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
-    description: 'A robust full-stack application that enables users to create and manage property listings. Once logged in, users are directed to a dashboard displaying property metadata. The application allows the sorting and filtering of properties based on price or name for enhanced usability.',
-    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
-    linkToSource: 'https://github.com/Leboroz/management-dashboard',
-  },
-  {
     image: project1,
     title: 'RentUrTech',
     languages: ['React-Redux', 'SASS', 'Ruby on Rails'],
@@ -29,6 +21,14 @@ const arrOfProjects = [
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are logged in the can create groups of transactions and see the total amount. Users can create transactions for one or many groups.',
     linkLiveVersion: 'https://rails-budget-app-fqfy.onrender.com/',
     linkToSource: 'https://github.com/Leboroz/budget-app',
+  },
+  {
+    image: project7,
+    title: 'Management Dashboard',
+    languages: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+    description: 'A robust full-stack application that enables users to create and manage property listings. Once logged in, users are directed to a dashboard displaying property metadata. The application allows the sorting and filtering of properties based on price or name for enhanced usability.',
+    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
+    linkToSource: 'https://github.com/Leboroz/management-dashboard',
   },
   {
     image: project5,
