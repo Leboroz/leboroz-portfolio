@@ -41,7 +41,7 @@ export default function AboutSection() {
             Hello! My name is Leonardo and I enjoy creating things that live on the internet. Having me in your team means that you will not have to worry about any deadline.
           </p>
           <p className='fs-2'>
-            Passionate about designing features to improve user experience. Can help deliver IT services and solutions through brainstorming and frequent feedback to impact internal and external stakeholders positively
+            I am a Full Stack software developer currently looking for an opportunity to work with an innovative team in a growing environment using the latest technologies.
           </p>
           <p className="fs-2">
             I’ve had the privilege of working with developers from all around the world building responsive websites ready to scale. My main focus is to build accessible, inclusive products and digital experiences.
