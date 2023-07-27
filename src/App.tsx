@@ -11,6 +11,7 @@ import { SiAboutdotme } from 'react-icons/si';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BsWhatsapp } from 'react-icons/bs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,7 @@ export default function App() {
         [
           { comp: <FiGithub />, link: 'https://github.com/leboroz', name: 'github', tip: 'Github', content: "Github link" },
           { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin', content: "Linkedin link" },
+          { comp: <BsWhatsapp />, link: 'https://wa.me/+584246198899', name: 'Whatsapp', tip: 'Whatsapp', content: "Whatsapp link" },
         ]
       } blank>
         <div className="line"></div>
