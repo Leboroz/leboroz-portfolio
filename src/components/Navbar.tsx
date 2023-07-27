@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Tooltip } from 'react-tooltip';
 
-type link = { comp: ReactNode, link: string, name: string, tip: string };
+type link = { comp: ReactNode, link: string, name: string, tip: string, content: string };
 
 type props = {
   className?: string,
@@ -18,10 +18,10 @@ export default function Navbar({ className = "navbar", active, links, children, 
       <header className={`${className}`}>
         <nav>
           <ul className="nav-links">
-            {links.map(({ comp, link, name }: link, index: number) => {
+            {links.map(({ comp, link, name, content }: link, index: number) => {
               return (
                 <li key={index} className="nav-link fs-3">
-                  <a id={name} className={`text-primary ${active === link ? 'active' : ''}`} href={link} target={blank ? '_blank' : ''} rel='noreferrer'>{comp}</a>
+                  <a id={name} className={`text-primary ${active === link ? 'active' : ''}`} href={link} target={blank ? '_blank' : ''} rel='noreferrer'>{comp} <span className='visually-hidden'>{content}</span></a>
                 </li>
               )
             })}

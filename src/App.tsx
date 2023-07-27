@@ -53,16 +53,16 @@ export default function App() {
       <LoadingScreen />
       <Navbar place="right" active={currentPage} links={
         [
-          { comp: <HiOutlineHome />, link: '#intro', name: 'home', tip: 'Introduction' },
-          { comp: <HiOutlineBriefcase />, link: '#project', name: 'work', tip: 'Projects' },
-          { comp: <SiAboutdotme />, link: '#me', name: 'about', tip: 'About' },
+          { comp: <HiOutlineHome />, link: '#intro', name: 'home', tip: 'Introduction', content: "Introduction Section" },
+          { comp: <HiOutlineBriefcase />, link: '#project', name: 'work', tip: 'Projects', content: "Workspace Section" },
+          { comp: <SiAboutdotme />, link: '#me', name: 'about', tip: 'About', content: "About Me Section" },
         ]
 
       } />
       <Navbar place="left" className="socials" links={
         [
-          { comp: <FiGithub />, link: 'https://github.com/leboroz', name: 'github', tip: 'Github' },
-          { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin' },
+          { comp: <FiGithub />, link: 'https://github.com/leboroz', name: 'github', tip: 'Github', content: "Github link" },
+          { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin', content: "Linkedin link" },
         ]
       } blank>
         <div className="line"></div>
@@ -70,7 +70,7 @@ export default function App() {
       <WindowPopUp onClick={animate} pos={{ bottom: '4rem', left: '2rem' }} refWin={myForm}>
         <ContactForm onClick={animate} />
       </WindowPopUp>
-      <ContactMeButton onClick={animate}>
+      <ContactMeButton onClick={animate} content="Contact me">
         <FaRegEnvelope />
       </ContactMeButton>
       <IntroSection />
