@@ -156,6 +156,9 @@ ul {
 .section {
   padding: 4vh $section-padding;
   min-height: 100vh;
+  @include mq(lg) {
+    height: 100vh;
+  }
 }
 
 .flex {
