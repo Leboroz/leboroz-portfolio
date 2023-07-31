@@ -2,10 +2,12 @@
 @use '../mixins/breakpoints' as *;
 
 .about-section {
+  gap: 3rem;
+
   @include mq(lg) {
+    gap: 1rem;
     justify-content: center;
     flex-direction: row;
-    gap: 1rem;
     
     article {
       flex: 1;
@@ -16,10 +18,10 @@
     }
   }
   &-content {
-    transform: translateY(20%);
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 
     @include mq(lg) {
+      transform: translateY(20%);
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
       width: 50%;
     }
 

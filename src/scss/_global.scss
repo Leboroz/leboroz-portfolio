@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  padding-bottom: 70px;
 }
 
 ::-webkit-scrollbar {
@@ -153,8 +154,8 @@ ul {
 }
 
 .section {
-  height: 100vh;
   padding: 4vh $section-padding;
+  min-height: 100vh;
 }
 
 .flex {
