@@ -1,4 +1,5 @@
 //frontend
+import wordpress from '../assets/images/tech/frontend/wordpress.webp';
 import js from '../assets/images/tech/frontend/js.png';
 import react from '../assets/images/tech/frontend/react.png';
 import css from '../assets/images/tech/frontend/css-3.png';
@@ -8,6 +9,7 @@ import html from '../assets/images/tech/frontend/html-5.png';
 import jquery from '../assets/images/tech/frontend/jquery.png';
 
 //backend
+import php from '../assets/images/tech/backend/php.svg';
 import ruby from '../assets/images/tech/backend/ruby.png';
 import rails from '../assets/images/tech/backend/rails.png';
 import postgres from '../assets/images/tech/backend/postgre.png';
@@ -23,6 +25,10 @@ import rspec from '../assets/images/tech/tools/rspec.png';
 import vim from '../assets/images/tech/tools/vim.svg';
 
 const frontEnd = [
+  {
+    img: wordpress,
+    label: 'Wordpress',
+  },
   {
     img: js,
     label: 'JavaScript',
@@ -54,6 +60,10 @@ const frontEnd = [
 ];
 
 const backEnd = [
+  {
+    img: php,
+    label: 'PHP',
+  },
   {
     img: ruby,
     label: 'Ruby',
