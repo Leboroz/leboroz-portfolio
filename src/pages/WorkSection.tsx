@@ -13,10 +13,12 @@ export default function WorkSection() {
         opacity: 1,
         delay: 0.5,
         stagger: 0.4,
+        scale: 1,
         scrollTrigger: {
-          trigger: section('#work'),
+          trigger: section('#project'),
         },
         transform: 'translateY(0)',
+
       });
   }, [])
 

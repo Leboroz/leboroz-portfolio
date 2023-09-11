@@ -12,7 +12,7 @@ export default function AboutSection() {
     let mm = gsap.matchMedia();
     mm.add("(min-width: 992px)", () => {
       gsap
-        .to(section('article'), {
+        .to(section('#aboutContent'), {
           'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
           transform: 'translateY(-20%)',
           delay: 0.5,
@@ -38,7 +38,7 @@ export default function AboutSection() {
   return (
     <>
       <section ref={aboutSection} id="me" className="about-section section flex column a-center end-of-page">
-        <article className="about-section-content text-white flex column gap-1">
+        <article id="aboutContent" className="about-section-content text-white flex column gap-1">
           <h2 className="letter-gap weight-300 fs-3">About</h2>
           <p className="fs-2">
             Hello! My name is Leonardo and I enjoy creating things that live on the internet. Having me in your team means that you will not have to worry about any deadline.
