@@ -8,7 +8,7 @@ import ContactForm from "./components/ContactForm";
 import { HiOutlineHome, HiOutlineBriefcase } from 'react-icons/hi'
 import { FaRegEnvelope } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
-import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -66,6 +66,7 @@ export default function App() {
           { comp: <FiLinkedin />, link: 'https://linkedin.com/in/leboroz', name: 'linkedin', tip: 'Linkedin', content: "Linkedin link" },
           { comp: <BsWhatsapp />, link: 'https://wa.me/+584246198899', name: 'Whatsapp', tip: 'Whatsapp', content: "Whatsapp link" },
           { comp: <FiTwitter />, link: 'https://twitter.com/leboroz', name: 'Twitter', tip: 'Twitter', content: "Twitter link" },
+          { comp: <FiInstagram />, link: 'https://www.instagram.com/leonardo_albornoz/', name: 'Instagram', tip: 'Instagram', content: "Instagram link" },
         ]
       } blank>
         <div className="line"></div>
